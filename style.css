@@ -1,0 +1,268 @@
+*, html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color:cadetblue;
+    color: rgb(5, 248, 70);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.body {
+  background-color: rgb(207, 216, 224);
+    
+}
+
+.logo {
+ margin-right: auto;
+}
+
+.logo-btk {
+    width: 120px;
+    height: 80px;
+    margin-left: 10px;
+    cursor:grab;
+    transition: all .5s ease 0s;
+}
+
+
+.logo:hover {
+    color:blue;
+    transform: rotate(5deg)
+}
+
+nav ul{
+    display : flex;
+    padding: 22px;
+}
+
+a {
+    color : black;
+    text-decoration: none;
+
+}
+
+li {
+    list-style-type: none;
+    padding: 12px;
+    
+}
+
+li a:hover {
+    color: gold;
+}
+
+li a {
+    transition: all .5s ease 0s;
+    display: inline-block;
+}
+
+.btn {
+    margin-right: 30px;
+    border: none;
+    font-size: 20px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: gold;
+}
+
+.container {
+    display: contents;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 0;
+    color: black;
+}
+
+.intro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.description {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.img-foto {
+    width: 100%;
+    max-width: 500px;
+    max-height: auto;
+    padding: 10px;
+    background-color:gold;
+}
+
+.parallax {
+    background-image: url('IMAGE/pohon.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.tentang {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: cadetblue;
+    color:black;
+    padding: 10px;
+    margin: 0.5;
+}
+
+.btn-2 {
+    margin-top: 7px;
+    border: none;
+    font-size: 20px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color:black;
+    background-color: gold;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-wrap: wrap;
+    height: 50vh;
+}
+
+.card-item {
+    display:contents;
+    width: 20%;
+    margin: 10px;
+    color: black bold;
+    padding: 20px;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.5);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 50p;
+    height: 45px;
+    align-items: center;
+}
+
+.fa-brands {
+    color: rgb(15, 15, 15);
+    size: 10px;
+    cursor: pointer;
+    color: red;
+    background-color: pink;
+
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    padding: 40px;
+    text-align: center;
+    background: cadetblue;
+}
+
+.gallery {
+    display: flex;
+    background-color:none;
+    gap: 10px;
+    margin: 0;
+}
+
+.card {
+    position: relative;
+    left: 0px;
+    width: 160px;
+    height: 190px;
+    background-color: var(--background);
+    border-radius: 8px;
+    transition: 1000ms all;
+    transform-origin: center left;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.5);
+    outline: 1px solid var(--background);
+    overflow: hidden;
+    text-align: center;
+}
+
+.card img {
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.card :hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.card:hover figcaption {
+    font-size: 0.5rem;
+    position: absolute;
+    height: 80px;
+    width: 140px;
+    display: flex;
+    align-items: end;
+    background: linear-gradient(to top,
+    rgba(14, 13, 13, 0.9) 0%,
+    rgba(0, 0, 0, 0) 100%
+    );
+    color: gold;
+    left: 0px;
+    bottom: 0px;
+    padding-left: 10px;
+    padding-bottom: 3px;
+}
+
+.card:hover ~ .card {
+    font-weight: bold;
+    cursor: pointer;
+    transform: translateX(12px);
+}
+
+@media screen and (max-width: 500px) {
+    .card {
+        flex-direction: column;
+    }
+    .card-item {
+        width: 100%
+    }
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+    .img-foto {
+        padding: 0;
+    }
+    .intro {
+        margin-top: 20px;
+    }
+
+}
